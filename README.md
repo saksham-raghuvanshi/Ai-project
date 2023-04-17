@@ -14,6 +14,10 @@
 
 ```sh
 $ pip install -r  requirements.txt
+or
+$ pip install opencv-python
+$ pip install PIL
+
 ```
 
 2 : Run The App 
