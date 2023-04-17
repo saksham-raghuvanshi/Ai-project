@@ -6,7 +6,8 @@ def main_app(name):
         
         face_cascade = cv2.CascadeClassifier('./data/haarcascade_frontalface_default.xml')
         recognizer = cv2.face.LBPHFaceRecognizer_create()
-        recognizer.read(f"./data/classifiers/{name}_classifier.xml")
+        print(f".\\data\\classifiers\\{name}_classifier.xml")
+        recognizer.read(f".\\data\\classifiers\\{name}_classifier.xml")
         cap = cv2.VideoCapture(0)
         pred = 0
         while True:
@@ -42,7 +43,7 @@ def main_app(name):
             cv2.imshow("image", frame)
 
 
-            if cv2.waitKey(20) & 0xFF == ord('q'):
+            if cv2.waitKey(1) & 0xFF == ord('q'):
                 print(pred)
                 if pred > 0 : 
                     dim =(124,124)
@@ -65,8 +66,8 @@ def main_app(name):
                     frame = cv2.imread("end.png", 1)
 
                     cv2.imshow("Result",frame)
-                    cv2.waitKey(5000)
-                break
+                    if cv2.waitKey(1) & 0xFF == ord('q'):
+                        break
 
 
         cap.release()
