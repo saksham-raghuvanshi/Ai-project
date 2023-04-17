@@ -6,11 +6,6 @@
   - Collect Face Data
   - Build Face Classifier 
   - Detecte the face
-
-#  New Features!
-
-  - Add Emotion detection
-  - Fixed image loading in Linux 
   
   
 # Installation
