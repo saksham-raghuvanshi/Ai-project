@@ -47,9 +47,9 @@ class MainUI(tk.Tk):
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Are you sure?"):
             global names
-            f = open("nameslist.txt", "a+")
-            for i in names:
-                f.write(i + " ")
+            # f = open("nameslist.txt", "a+")
+            # for i in names:
+            #     f.write(i + " ")
             self.destroy()
 
 
@@ -93,10 +93,10 @@ class StartPage(tk.Frame):
 
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Are you sure?"):
-            global names
-            with open("nameslist.txt", "w") as f:
-                for i in names:
-                    f.write(i + " ")
+            # global names
+            # with open("nameslist.txt", "w") as f:
+            #     for i in names:
+            #         f.write(i + " ")
             self.controller.destroy()
 
 
@@ -135,6 +135,10 @@ class PageOne(tk.Frame):
         elif len(self.user_name.get()) == 0:
             messagebox.showerror("Error", "Name cannot be empty!")
             return
+        else:
+            with open("nameslist.txt", "a") as file:
+                file.write(f" {self.user_name.get()}")
+                file.close()
         name = self.user_name.get()
         names.add(name)
         self.controller.active_name = name
