@@ -1,11 +1,12 @@
 # Ai-project
 
 
-# A very Simple Gui app for Face Detection 
+# A Simple app for Face Detection + Mask Detection 
 
   - Collect Face Data
   - Build Face Classifier 
   - Detecte the face
+  - Detecte the mask
   
   
 # Installation
@@ -14,9 +15,9 @@
 
 ```sh
 $ pip install -r  requirements.txt
-or
 $ pip install opencv-python
 $ pip install PIL
+$ pip install --upgrade --force-reinstall -r requirements.txt
 
 ```
 
@@ -44,8 +45,10 @@ List of all the users<br>
 
 ### Recognition <br>
 A webcam window will popup and start recognition proccess<br>
+![WhatsApp Image 2023-04-18 at 12 22 17](https://user-images.githubusercontent.com/86155054/232696928-74b24297-452d-47bf-81c1-fda8115ff69f.jpg)
+![WhatsApp Image 2023-04-18 at 12 22 00](https://user-images.githubusercontent.com/86155054/232696978-749d0afb-32d1-4a02-a1ba-22abf8955cc3.jpg)
 
-![WhatsApp Image 2023-04-17 at 11 18 49](https://user-images.githubusercontent.com/86155054/232402518-47aacec1-0f45-46f1-a6b2-ae9462356884.jpg)
+
 
 
 
