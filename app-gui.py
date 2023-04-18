@@ -58,7 +58,7 @@ class StartPage(tk.Frame):
         tk.Frame.__init__(self, parent)
         self.controller = controller
         load = Image.open("homepagepic.png")
-        load = load.resize((250, 250), Image.ANTIALIAS)
+        load = load.resize((250, 250), Image.LANCZOS)
         render = PhotoImage(file="homepagepic.png")
         img = tk.Label(self, image=render)
         img.image = render
