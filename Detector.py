@@ -53,10 +53,8 @@ def main_app(name):
                 """Generates output predictions for the input samples.
                 Computation is done in batches. This method is designed for batch processing of large numbers of inputs. It is not intended for use inside of loops that iterate over your data and process small numbers of inputs at a time.
                 """
-                print()
-                pred_mask = model.predict(
-                    faces_list
-                )  # Return Numpy array(s) of predictions.
+                print(faces_list)
+                pred_mask = model.predict(faces_list[-1])  # Return Numpy array(s) of predictions.
 
             print(f"preds : {pred_mask}")
             for pred in pred_mask:
